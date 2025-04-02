@@ -38,16 +38,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <main>
     <!-- Reservation Header -->
     <section class="page-header">
-        <div class="container">
+        <article class="container">
             <h1>Reserveren</h1>
             <p>Reserveer een tafel bij Saffraan & Sahara</p>
-        </div>
+        </article>
     </section>
 
     <!-- Reservation Info -->
     <section class="reservation-info">
-        <div class="container">
-            <div class="info-content">
+        <article class="container">
+            <article class="info-content">
                 <h2>Informatie over reserveringen</h2>
                 <ul>
                     <li>Reserveringen kunnen tot 24 uur van tevoren worden gemaakt.</li>
@@ -56,15 +56,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <li>Voor speciale gelegenheden of catering kunt u contact opnemen via het contactformulier of telefonisch.</li>
                     <li>Bij speciale wensen of dieetwensen kunt u dit aangeven in het opmerkingenveld.</li>
                 </ul>
-            </div>
-        </div>
+            </article>
+        </article>
     </section>
 
     <?php if ($success): ?>
     <!-- Success Message -->
     <section class="reservation-success">
-        <div class="container">
-            <div class="success-content">
+        <article class="container">
+            <article class="success-content">
                 <i class="fas fa-check-circle"></i>
                 <h2>Uw reservering is geslaagd!</h2>
                 <p>Bedankt voor uw reservering bij Saffraan & Sahara.</p>
@@ -78,47 +78,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </ul>
                 <p>Heeft u vragen over uw reservering? Neem gerust contact met ons op.</p>
                 <a href="index.php" class="btn btn-primary">Terug naar homepage</a>
-            </div>
-        </div>
+            </article>
+        </article>
     </section>
     <?php else: ?>
     <!-- Reservation Form -->
     <section class="reservation-form">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="form-container">
+        <article class="container">
+            <article class="row">
+                <article class="col-md-7">
+                    <article class="form-container">
                         <h2>Reserveringsformulier</h2>
                         
                         <?php if (!empty($error)): ?>
-                            <div class="alert alert-danger">
+                            <article class="alert alert-danger">
                                 <?php echo $error; ?>
-                            </div>
+                            </article>
                         <?php endif; ?>
                         
                         <form id="reservationForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                            <div class="form-group">
+                            <article class="form-group">
                                 <label for="name">Naam *</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
+                            </article>
                             
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <article class="form-row">
+                                <article class="form-group col-md-6">
                                     <label for="email">E-mail *</label>
                                     <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="form-group col-md-6">
+                                </article>
+                                <article class="form-group col-md-6">
                                     <label for="phone">Telefoonnummer *</label>
                                     <input type="tel" class="form-control" id="phone" name="phone" required>
-                                </div>
-                            </div>
+                                </article>
+                            </article>
                             
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <article class="form-row">
+                                <article class="form-group col-md-6">
                                     <label for="date">Datum *</label>
                                     <input type="date" class="form-control" id="date" name="date" min="<?php echo date('Y-m-d'); ?>" required>
-                                </div>
-                                <div class="form-group col-md-6">
+                                </article>
+                                <article class="form-group col-md-6">
                                     <label for="time">Tijd *</label>
                                     <select class="form-control" id="time" name="time" required>
                                         <option value="">Selecteer tijd</option>
@@ -132,10 +132,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <option value="20:30">20:30</option>
                                         <option value="21:00">21:00</option>
                                     </select>
-                                </div>
-                            </div>
+                                </article>
+                            </article>
                             
-                            <div class="form-group">
+                            <article class="form-group">
                                 <label for="guests">Aantal personen *</label>
                                 <select class="form-control" id="guests" name="guests" required>
                                     <option value="">Selecteer aantal</option>
@@ -144,48 +144,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <?php endfor; ?>
                                 </select>
                                 <small class="form-text text-muted">Voor groepen groter dan 8 personen, bel ons a.u.b. op 088-2324456.</small>
-                            </div>
+                            </article>
                             
-                            <div class="form-group">
+                            <article class="form-group">
                                 <label for="message">Speciale wensen of opmerkingen</label>
                                 <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                            </div>
+                            </article>
                             
-                            <div class="form-check mb-3">
+                            <article class="form-check mb-3">
                                 <input type="checkbox" class="form-check-input" id="termsCheck" required>
                                 <label class="form-check-label" for="termsCheck">Ik ga akkoord met de <a href="#" data-toggle="modal" data-target="#termsModal">voorwaarden</a> *</label>
-                            </div>
+                            </article>
                             
                             <button type="submit" class="btn btn-primary btn-block">Reservering bevestigen</button>
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="reservation-image">
+                    </article>
+                </article>
+                <article class="col-md-5">
+                    <article class="reservation-image">
                         <img src="images/restaurant-interior.jpg" alt="Restaurant interieur" class="img-fluid rounded">
-                        <div class="contact-info">
+                        <article class="contact-info">
                             <h3>Liever telefonisch reserveren?</h3>
                             <p>Bel ons op <a href="tel:0882324456">088-2324456</a></p>
                             <p>We zijn dagelijks geopend van 12:00 tot 22:00.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </article>
+                    </article>
+                </article>
+            </article>
+        </article>
     </section>
     <?php endif; ?>
 
     <!-- Terms Modal -->
-    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
+    <article class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <article class="modal-dialog" role="document">
+            <article class="modal-content">
+                <article class="modal-header">
                     <h5 class="modal-title" id="termsModalLabel">Reserveringsvoorwaarden</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
+                </article>
+                <article class="modal-body">
                     <h5>Reserveringsbeleid Saffraan & Sahara</h5>
                     <p>Door een reservering te maken bij ons restaurant, gaat u akkoord met de volgende voorwaarden:</p>
                     <ol>
@@ -195,13 +195,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li>Voor groepen groter dan 8 personen is telefonische reservering vereist.</li>
                         <li>Uw contactgegevens worden alleen gebruikt voor het verwerken van uw reservering en worden niet met derden gedeeld.</li>
                     </ol>
-                </div>
-                <div class="modal-footer">
+                </article>
+                <article class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                </article>
+            </article>
+        </article>
+    </article>
 </main>
 
 <?php
