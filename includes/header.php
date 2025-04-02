@@ -1,5 +1,3 @@
-
-             
 <?php 
 // Start session for potential form handling
 session_start();
@@ -22,13 +20,13 @@ session_start();
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
-            <div class="header-inner">
-                <div class="logo">
+        <article class="container">
+            <article class="header-inner">
+                <article class="logo">
                     <a href="index.php">
                         <img src="images/logo.png" alt="Saffraan &amp; Sahara Logo" class="logo-img">
                     </a>
-                </div>
+                </article>
                 <nav class="main-nav">
                     <button class="menu-toggle" aria-label="Toggle Menu">
                         <span class="bar"></span>
@@ -43,7 +41,7 @@ session_start();
                         <li><a href="vacancies.php">Vacatures</a></li>
                     </ul>
                 </nav>
-            </div>
-        </div>
+            </article>
+        </article>
     </header>
     <main>

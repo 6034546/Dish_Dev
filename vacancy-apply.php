@@ -18,45 +18,45 @@ if (!$vacancy) {
 
 <main>
     <section class="apply-header">
-        <div class="container">
+        <article class="container">
             <h1>Solliciteer voor: <?php echo htmlspecialchars($vacancy['title']); ?></h1>
             <p>Vul het onderstaande formulier in om te solliciteren.</p>
-        </div>
+        </article>
     </section>
 
     <section class="apply-form">
-        <div class="container">
+        <article class="container">
             <form action="submit-application.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="vacancy_id" value="<?php echo $vacancyId; ?>">
                 
-                <div class="form-group">
+                <article class="form-group">
                     <label for="name">Naam</label>
                     <input type="text" id="name" name="name" class="form-control" required>
-                </div>
+                </article>
                 
-                <div class="form-group">
+                <article class="form-group">
                     <label for="email">E-mailadres</label>
                     <input type="email" id="email" name="email" class="form-control" required>
-                </div>
+                </article>
                 
-                <div class="form-group">
+                <article class="form-group">
                     <label for="phone">Telefoonnummer</label>
                     <input type="text" id="phone" name="phone" class="form-control" required>
-                </div>
+                </article>
                 
-                <div class="form-group">
+                <article class="form-group">
                     <label for="message">Motivatie</label>
                     <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                </div>
+                </article>
                 
-                <div class="form-group">
+                <article class="form-group">
                     <label for="cv">Upload je CV</label>
                     <input type="file" id="cv" name="cv" class="form-control-file" required>
-                </div>
+                </article>
                 
                 <button type="submit" class="btn btn-primary">Verstuur sollicitatie</button>
             </form>
-        </div>
+        </article>
     </section>
 </main>
 
