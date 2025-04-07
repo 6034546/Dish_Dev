@@ -482,7 +482,9 @@ p {
     border-width: 0;
 }
 
-/* Font Size Accessibility */
+/*
+
+ Font Size Accessibility 
 .font-size-controls {
     position: fixed;
     bottom: 20px;
@@ -508,6 +510,8 @@ p {
 .font-size-btn:hover {
     color: var(--primary-color);
 }
+
+*/
 
 .dishes-container {
     display: flex;

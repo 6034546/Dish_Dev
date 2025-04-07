@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+
+/*    
+
     // Font Size Accessibility
     const increaseFontBtn = document.querySelector('.increase-font');
     const decreaseFontBtn = document.querySelector('.decrease-font');
@@ -91,7 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('fontSize', `${defaultFontSize}px`);
         });
     }
-    
+   
+*/    
+
     // Image Gallery Lightbox
     const galleryItems = document.querySelectorAll('.gallery-item img');
     
